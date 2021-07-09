@@ -1,16 +1,18 @@
 # vim-jk-join
-Intuitive and repeatable line joining with J and K
+Intuitive and repeatable line joining
 
 ## Features
-- Upwards joining using `K`
-- Keep cursor position
-- Repeat action using `.` (if `vim-repeat` is available)
+- Upwards joining
+- Remember cursor
+- Easy line numbering
+- Repeat action (using [vim-repeat](https://github.com/tpope/vim-repeat))
 
 ## Installation
-If using [vim-plug](https://github.com/junegunn/vim-plug), add the following to your `vimrc` or `gvimrc`:
+If using [vim-plug](https://github.com/junegunn/vim-plug), add the following to `vimrc`:
 ```vim
 call plug#begin()
 " ...
+Plug 'tpope/vim-repeat' " Optional dependency, enables repetition with '.'
 Plug 'awvalenti/vim-jk-join'
 " ...
 call plug#end()
@@ -18,15 +20,16 @@ call plug#end()
 
 For other plugin managers, please check their documentation,
 or take a look at
-[Vim 8's native plugin system](https://duckduckgo.com/?t=ffab&q=vim+native+plugin+management&ia=web).
+[native plugin system](https://duckduckgo.com/?t=ffab&q=vim+native+plugin+management&ia=web).
 
 ## Usage
-- `J` joins downwards (originally, it'd lost cursor position)
-- `K` joins upwards
-- `3J` joins up to 3 lines below (originally, 2 lines below)
-- `.` to repeat last join
+- `[count]J` joins `count` lines downwards
+- `[count]K` joins `count` lines upwards
+- `.` repeats last join
 
 ## Appreciation
 If you find this plugin useful, please [leave me a star up there ⭐](#top)!
 
-## TODO Make mappings configurable
+## TODO
+- Make mappings configurable
+
