@@ -38,16 +38,16 @@ let g:jk_join_manual_mapping = v:true
 ```
 
 - I'd like to use only `K`
-  ```
+  ```vim
   nmap K <Plug>JkJoinK
   ```
 - I'd like to use only `gJ` and `gK`
-  ```
+  ```vim
   nmap gJ <Plug>JkJoinGJ
   nmap gK <Plug>JkJoinGK
   ```
 - I like the `K` feature, but I'd rather have it mapped to `gK`
-  ```
+  ```vim
   nmap gK <Plug>JkJoinK
   ```
 
