@@ -23,8 +23,10 @@ or take a look at
 [native plugin system](https://duckduckgo.com/?t=ffab&q=vim+native+plugin+management&ia=web).
 
 ## Usage
-- `[count]J` joins `count` lines downwards
-- `[count]K` joins `count` lines upwards
+- `[count]J` joins `count` lines downwards changing spaces
+- `[count]K` joins `count` lines upwards changing spaces
+- `[count]gJ` joins `count` lines downwards keeping spaces
+- `[count]gK` joins `count` lines upwards keeping spaces
 - `.` repeats last join
 
 ## Appreciation
