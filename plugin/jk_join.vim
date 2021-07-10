@@ -21,9 +21,9 @@ function! <SID>JkJoinK()
   call s:JkJoin("\<Plug>JkJoinK", max([1, line('.') - v:count1]) .. ',.j')
 endfunction
 
-nnoremap <Plug>JkJoinJ <Cmd>call <SID>JkJoinJ()<CR>
-nnoremap <Plug>JkJoinK <Cmd>call <SID>JkJoinK()<CR>
+nnoremap <Plug>JkJoinJ :<C-u>call <SID>JkJoinJ()<CR>
+nnoremap <Plug>JkJoinK :<C-u>call <SID>JkJoinK()<CR>
 
-nmap K <Plug>JkJoinK
 nmap J <Plug>JkJoinJ
+nmap K <Plug>JkJoinK
 
