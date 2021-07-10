@@ -32,6 +32,3 @@ or take a look at
 ## Appreciation
 If you find this plugin useful, please [leave me a star up there ⭐](#top)!
 
-## TODO
-- Make mappings configurable
-
