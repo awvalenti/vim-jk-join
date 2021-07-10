@@ -1,9 +1,9 @@
 scriptversion 4
 
-if exists('g:loaded_jk_join') || &compatible
+if exists('g:jk_join_loaded') || &compatible
   finish
 endif
-let g:loaded_jk_join = v:true
+let g:jk_join_loaded = v:true
 
 function! s:JkJoin(plug_map_name, join_cmd)
   let l:count1 = v:count1
@@ -29,13 +29,15 @@ function! <SID>JkJoinGK()
   call s:JkJoin("\<Plug>JkJoinGK", max([1, line('.') - v:count1]) .. ',.j!')
 endfunction
 
-nnoremap <Plug>JkJoinJ :<C-u>call <SID>JkJoinJ()<CR>
+nnoremap <Plug>JkJoinJ  :<C-u>call <SID>JkJoinJ()<CR>
 nnoremap <Plug>JkJoinGJ :<C-u>call <SID>JkJoinGJ()<CR>
-nnoremap <Plug>JkJoinK :<C-u>call <SID>JkJoinK()<CR>
+nnoremap <Plug>JkJoinK  :<C-u>call <SID>JkJoinK()<CR>
 nnoremap <Plug>JkJoinGK :<C-u>call <SID>JkJoinGK()<CR>
 
-nmap J <Plug>JkJoinJ
-nmap gJ <Plug>JkJoinGJ
-nmap K <Plug>JkJoinK
-nmap gK <Plug>JkJoinGK
+if !get(g:, 'jk_join_manual_mapping', v:false)
+  nmap J  <Plug>JkJoinJ
+  nmap gJ <Plug>JkJoinGJ
+  nmap K  <Plug>JkJoinK
+  nmap gK <Plug>JkJoinGK
+endif
 
