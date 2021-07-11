@@ -32,7 +32,7 @@ or take a look at
 - `.` repeats last join
 
 ### Customized
-Default mappings are:
+Usual mappings are:
 ```vim
 nmap J  <Plug>JkJoinJ
 nmap gJ <Plug>JkJoinGJ
@@ -40,25 +40,23 @@ nmap K  <Plug>JkJoinK
 nmap gK <Plug>JkJoinGK
 ```
 
-To skip them and map as you prefer:
+You can skip them to do custom mappings (samples below):
 ```vim
 let g:jk_join_manual_mapping = v:true
 ```
-
-Samples:
-- Only `K`:
-  ```vim
-  nmap K <Plug>JkJoinK
-  ```
-- Only `gJ` and `gK`:
-  ```vim
-  nmap gJ <Plug>JkJoinGJ
-  nmap gK <Plug>JkJoinGK
-  ```
-- `K` mapped to `gK`
-  ```vim
-  nmap gK <Plug>JkJoinK
-  ```
+Only `K`:
+```vim
+nmap K <Plug>JkJoinK
+```
+Only `gJ` and `gK`:
+```vim
+nmap gJ <Plug>JkJoinGJ
+nmap gK <Plug>JkJoinGK
+```
+The `K` feature, but mapped to `gK`
+```vim
+nmap gK <Plug>JkJoinK
+```
 
 Note that `k` in `JkJoin` is lowercase!
 
@@ -67,9 +65,9 @@ Note that `k` in `JkJoin` is lowercase!
 - Couldn't I simply `nnoremap K kJ` to have `K`?
 
 Yep, but you'd lose:
-- `3J` == `JJJ` (would act as `JJ`)
-- `3K` == `KKK` (would move three lines above and join once)
-- `.` to repeat joins
+- `5J` == 5 times `J` (would act as *4* times `JJ`)
+- `5K` == 5 times `K` (would move 5 lines above and join *once*)
+- `.` to repeat
 - Cursor retaining
 
 ## Appreciation
