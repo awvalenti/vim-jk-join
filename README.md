@@ -2,10 +2,10 @@
 Intuitive and repeatable line joining
 
 ## Features
-- Down/upwards joining
-- Preserves cursor
+- Downwards/upwards joining
+- Cursor retaining
 - Easy line counting
-- Repeats actions (using [vim-repeat](https://github.com/tpope/vim-repeat))
+- Repeating actions (using [vim-repeat](https://github.com/tpope/vim-repeat))
 
 ## Installation
 If using [vim-plug](https://github.com/junegunn/vim-plug), add the following to `vimrc`:
@@ -32,36 +32,45 @@ or take a look at
 - `.` repeats last join
 
 ### Customized
+Default mappings are:
 ```vim
-" Prevents jk-join mapping any keys
+nmap J  <Plug>JkJoinJ
+nmap gJ <Plug>JkJoinGJ
+nmap K  <Plug>JkJoinK
+nmap gK <Plug>JkJoinGK
+```
+
+To skip them and map as you prefer:
+```vim
 let g:jk_join_manual_mapping = v:true
 ```
 
-- I'd like to use only `K`
+Samples:
+- Only `K`:
   ```vim
   nmap K <Plug>JkJoinK
   ```
-- I'd like to use only `gJ` and `gK`
+- Only `gJ` and `gK`:
   ```vim
   nmap gJ <Plug>JkJoinGJ
   nmap gK <Plug>JkJoinGK
   ```
-- I like the `K` feature, but I'd rather have it mapped to `gK`
+- `K` mapped to `gK`
   ```vim
   nmap gK <Plug>JkJoinK
   ```
 
-## Rationale
-Doesn't Vim already have `J` and `gJ`? Can't I simply add
-`nnoremap K kJ` to my `vimrc` to have `K`?
+Note that `k` in `JkJoin` is lowercase!
 
-You could, but you'd lose:
-- `3K` to join current + three lines above (it would just go up three lines
-  and join once)
-- `3J` to join current + three lines below (it would join current + *two*
-  lines below)
-- Repetition using `.`
-- Cursor preservation
+## Rationale
+- Doesn't Vim already have `J` and `gJ`?
+- Couldn't I simply `nnoremap K kJ` to have `K`?
+
+Yep, but you'd lose:
+- `3J` == `JJJ` (would act as `JJ`)
+- `3K` == `KKK` (would move three lines above and join once)
+- `.` to repeat joins
+- Cursor retaining
 
 ## Appreciation
 If you find this plugin useful, please [leave me a star up there ⭐](#top)!
