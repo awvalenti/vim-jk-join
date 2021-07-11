@@ -1,6 +1,8 @@
 # vim-jk-join
 Intuitive and repeatable line joining
 
+![Sample usage](sample-usage.gif)
+
 ## Features
 - Downwards/upwards joining
 - Cursor retaining
