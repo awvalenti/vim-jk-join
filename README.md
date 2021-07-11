@@ -32,7 +32,10 @@ or take a look at
 - `.` repeats last join
 
 ### Customized
-The usual mappings are (note: `k` in `JkJoin` is *lowercase*):
+You can skip the default mappings and map only what you want.
+Samples below.
+
+Default mappings are: (note: `k` in `JkJoin` is *lowercase*)
 ```vim
 nmap J  <Plug>JkJoinJ
 nmap gJ <Plug>JkJoinGJ
@@ -40,24 +43,20 @@ nmap K  <Plug>JkJoinK
 nmap gK <Plug>JkJoinGK
 ```
 
-The following line skips them:
-```vim
-let g:jk_join_manual_mapping = v:true
-```
-
-You can then do custom mappings. Samples:
-
 Only `K`:
 ```vim
+let g:jk_join_manual_mapping = v:true
 nmap K <Plug>JkJoinK
 ```
 Only `gJ` and `gK`:
 ```vim
+let g:jk_join_manual_mapping = v:true
 nmap gJ <Plug>JkJoinGJ
 nmap gK <Plug>JkJoinGK
 ```
 The `K` feature, but mapped to `gK`
 ```vim
+let g:jk_join_manual_mapping = v:true
 nmap gK <Plug>JkJoinK
 ```
 
